@@ -40,6 +40,7 @@
 \definecolor{pink}{rgb}{1.0,0.5,0.5}
 \definecolor{darkgray}{rgb}{0.1,0.1,0.1}
 \definecolor{lightgray}{rgb}{0.7,0.7,0.7}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{darkred}{rgb}{0.75,0,0}
 \definecolor{darkblue}{rgb}{0,0,0.35}
 \definecolor{green}{rgb}{0,0.70,0}
@@ -87,12 +88,13 @@
 % Refer to API commands
 \newcommand{\api}[1]{  ``\textcolor{black}{\texttt{/api/#1}}''}
 % Pun alert
-\newcommand{\pun}[1]{\emph{#1}}
+\newcommand{\pun}[1]{#1} % Emphasising it is kind of unnecessary
 % Shell command
 \newcommand{\shell}[1]{\texttt{#1}}
 % Rants
 \newcommand{\rant}[1]{\textsc{#1}}
-\renewcommand{\url}[1]{\href{#1}{#1}}
+\renewcommand{\url}[1]{\href{#1}{\color{blue}{#1}}}
+
 
 \newcommand{\setfont}[1]{\fontfamily{#1}\selectfont}
 
@@ -139,6 +141,8 @@
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
 
+\newcommand{\zchapter}[1]{\chapter{#1} \setcounter{section}{-1}}
+
 %---------------------------------------------------------
 %---------------------------------------------------------
 \begin{document}
@@ -150,7 +154,7 @@
 %---------------------------------------------------------
 % Do the table of Contents and lists of figures and tables
 %---------------------------------------------------------
-\linespread{0.8}
+\linespread{0.5}
 % Do we need these for a fresher guide?
 \tableofcontents
 %\listoffigures
@@ -163,6 +167,10 @@
 %---------------------------------------------------------
 %Include the chapters!
 
+\setcounter{chapter}{-1}
+
+
+\include{chapters/Introduction} % Chapter 0
 \include{chapters/FindClubroom} % Chapter 1
 \include{chapters/SetupAccount}
 \include{chapters/Dispense101}
@@ -170,6 +178,7 @@
 \include{chapters/Groups}
 \include{chapters/Clubroom}
 \include{chapters/Communications}
+\include{chapters/Services}
 % ETC
 
 %\newpage

@@ -1,51 +1,74 @@
-\chapter{UCC Groups}
+\zchapter{UCC Groups}
 
 % Explanation of the groups.
+\newenvironment{uccgroup}[1]
+{
+	\begin{mdframed}
+	\section{\textsc{#1}}
+	\begin{mdframed}
+		Contact: <\href{mailto:#1@ucc.asn.au}{#1@ucc.asn.au}>
+	\end{mdframed}
+	\begin{mdframed}
+		Members: \url{http://www.ucc.asn.au/infobase/groups/#1.ucc}
+	\end{mdframed}
+
+	
+
+}{\end{mdframed}}
 
 % Is this section a little elitist sounding, or is that just the entire group system? [SZM]
+\begin{mdframed}
+The UCC committee delegates specific duties and responsibilities to other people in the club. These groups, traditionally modelled after UNIX groups, are referred to often.
 
-The UCC committee delegates specific duties and responsibilities to other people in the club. These groups, traditionally modelled after UNIX groups, are referred to often. It pays to be aware of what the responsibilities of each group are.
-
-
-You can see who's in each group online (photos are included). Alternatively, if you're looking for a member of a certain group, shouting out 'is there anyone here in group?' will usually get you an answer.
-
-
-Unlike committee, obtaining membership to one of the UCC groups does not involve being elected. Membership of these groups entails a certain amount of trust, so you may not be allowed to join them straight away.
-
-The exact entry requirements are often vague and it is generally accepted that you will nominate yourself once you feel you meet those requirements. Members join Wheel by invite only, and will be asked to attend a Wheel Meeting, where they too will be taught the Secret Wheel Song.
-Do not despair if you're not made a Wheel member immediately. Sticking around and showing an interest through contribution is more important than just having the skills.
+You can see who's in each group online (photos are sometimes included). Alternatively, if you're looking for a member of a certain group, shouting out "is there anyone here in group?" will sometimes get you an answer.
 
 
+Membership of these groups entails a certain amount of trust. It is generally accepted that you will nominate yourself to the group once you feel you meet a set of requirements. This set of requirements is sometimes vague. Often it requires determined searching on the website (\url{http://www.ucc.asn.au/infobase}) to find. New group members are also often nominated by the existing group members.
 
-\section{Wheel}
-wheel@ucc.asn.au
-Wheel is in charge of maintaining the club's machines. They are the best people to see if you're having problems with the computers. Wheel maintains its own membership, but works hand in hand with Committee on issues relating to account policy. If you abuse your account, it will be locked by a Wheel member. The unlocking of accounts is at the discretion of Committee. Wheel have infrequent meetings, where they sing the secret wheel song.
+% Don't really need to brand wheel like a cabal to new members. I mean, it is, but they don't need to know that for at least a few weeks.
+%Members join Wheel by invite only, and will be asked to attend a Wheel Meeting, where they too will be taught the Secret Wheel Song.
+%Do not despair if you're not made a Wheel member immediately. Sticking around and showing an interest through contribution is more important than just having the skills.
 
-\section{Committee}
-committee@ucc.asn.au
-Fresher Rep: fresher@ucc.asn.au
+
+\end{mdframed}
+
+\begin{uccgroup}{committee}
 The Committee is appointed each year by the members (that's you) at the AGM. They handle the day-to-day running of the club, managing money, events and holding grumpy meetings each week, which members like yourself are welcome to attend.
+
+
 The Fresher Rep is your voice on the Committee. Get to know them and let them know how incredibly happy you are! If you have problems, they'll always be ready to listen.
 
-\section{Coke}
-coke@ucc.asn.au
-(appointed by committee)
-The Coke group are the people to talk to if you want to add money to your dispense account (see the section on dispense). They can also credit your account for bad dispenses and other tasks related to dispense.
+\begin{mdframed}
+Fresher Rep: <\href{mailto:fresher@ucc.asn.au}{fresher@ucc.asn.au}>
+\end{mdframed}
+\end{uccgroup}
 
-\section{Door}
-door@ucc.asn.au
-(appointed by committeee)
+\begin{uccgroup}{wheel}
+
+Wheel is in charge of maintaining the club's machines. They are the best people to see if you're having problems with the computers. Wheel maintains its own membership, but works hand in hand with Committee on issues relating to account policy. If you abuse your account, it will be locked by a Wheel member. The unlocking of accounts is at the discretion of Committee. Wheel have infrequent meetings, where they sing the secret wheel song. % THIS DOESN'T ACTUALLY HAPPEN
+
+\end{uccgroup}
+
+\begin{uccgroup}{door}
 The Door group is responsible for the clubroom itself. Only a member of door group can unlock the clubroom and keep it open for members during the day. This means that if the only Door group member in the room has to leave, then everyone will have to leave until another Door group member arrives.
+\end{uccgroup}
 
-\section{Webmasters}
-webmasters@ucc.asn.au
-The Webmasters are charged with maintaining the UCC web presence. Becoming a Webmaster usually involves showing some interest in the UCC website, as well as approval from an existing Webmaster or member of Wheel.
+\begin{uccgroup}{coke}
+The Coke group are the people to talk to if you want to add money to your dispense account (see the section on dispense). They can also credit your account for bad dispenses and other tasks related to dispense.
+\end{uccgroup}
 
-\section{Winadmins / Sprocket}
-winadmins@ucc.asn.au
+% Not even worth mentioning, really, it is all just wheel
+\begin{uccgroup}{webmasters}
 
-In response to the decreasing availability of Wheel members during the day, the Winadmins group was created to give trusted members administrator access to the Windows desktop machines in the clubroom. Sprocket is the equivelant group for Linux desktop machines.
+The Webmasters are charged with maintaining the UCC web presence. Becoming a Webmaster usually involves showing some interest in the UCC website. It shouldn't be too hard to get on this group.
 
+ Please. Someone save us from the horror of doctype graham.
+\end{uccgroup}
+
+\begin{uccgroup}{winadmin}
+
+The Winadmins group was created to give trusted members administrator access to the Windows desktop machines in the clubroom. Sprocket is the equivelant group for Linux desktop machines.
+\end{uccgroup}
 
 
 
