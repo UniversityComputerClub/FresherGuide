@@ -3,6 +3,7 @@
 % ~50% of this isn't actually needed, but it's too much effort to clean it up.
 
 \documentclass[a4paper,10pt,titlepage]{report}
+\renewcommand{\familydefault}{\ttdefault}
 %\linespread{1.3}
 %\usepackage{setspace}
 %\onehalfspacing 
@@ -10,6 +11,9 @@
  %\renewcommand{\baselinestretch}{1.5} 	% Uncomment for 1.5 spacing between lines
  %\parindent 0pt		  % sets leading space for paragraphs
 
+
+
+\usepackage{mdframed}
 
 %\usepackage{natbib}
 \usepackage{makeidx}
@@ -31,21 +35,22 @@
 \titleformat{\chapter}
 {\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
 
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{listings} % For code snippets
-
-\definecolor{darkgray}{rgb}{0.95,0.95,0.95}
+%\usepackage[usenames,dvipsnames]{color}
+%\usepackage{listings} % For code snippets
+\definecolor{pink}{rgb}{1.0,0.5,0.5}
+\definecolor{darkgray}{rgb}{0.1,0.1,0.1}
 \definecolor{darkred}{rgb}{0.75,0,0}
 \definecolor{darkblue}{rgb}{0,0,0.75}
-\definecolor{pink}{rgb}{1,0.5,0.5}
-\lstset{language=Java}
-\lstset{backgroundcolor=\color{darkgray}}
-\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
-\lstset{keywordstyle=\color{darkred}\bfseries}
-\lstset{commentstyle=\color{darkblue}}
+\definecolor{green}{rgb}{0,0.70,0}
+\definecolor{black}{rgb}{0,0,0}
+%\lstset{language=Java}
+%\lstset{backgroundcolor=\color{darkgray}}
+%\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
+%\lstset{keywordstyle=\color{darkred}\bfseries}
+%\lstset{commentstyle=\color{darkblue}}
 %\lstset{stringsyle=\color{red}}
-\lstset{showstringspaces=false}
-\lstset{basicstyle=\small}
+%\lstset{showstringspaces=false}
+%\lstset{basicstyle=\small}
 
 
 
@@ -86,6 +91,9 @@
 \newcommand{\shell}[1]{\texttt{#1}}
 % Rants
 \newcommand{\rant}[1]{\textsc{#1}}
+\renewcommand{\url}[1]{\href{#1}{#1}}
+
+\newcommand{\setfont}[1]{\fontfamily{#1}\selectfont}
 
 % To make underscores printable without escaping them
 \usepackage[T1]{fontenc}
@@ -125,6 +133,11 @@
 }
 \cfoot{}
 
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
 %---------------------------------------------------------
 %---------------------------------------------------------
 \begin{document}
@@ -163,7 +176,7 @@
 \renewcommand{\bibname}{References}
 \bibliography{references/refs}
 \bibliographystyle{ieeetr}  
-\addcontentsline{toc}{part}{References}
+%\addcontentsline{toc}{part}{References}
 %---------------------------------------------------------
 
 % Appendices
