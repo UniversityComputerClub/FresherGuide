@@ -1,27 +1,54 @@
 \chapter{UCC Events}
 Dates and times are subject to change.
 
+% Event with title and date
+\newenvironment{event}[3]
+{
+	\begin{mdframed}[backgroundcolor=darkgray]
+	\color{white}{\section{#1}}
+	\begin{mdframed}[backgroundcolor=white]
+	When: #2
+	\end{mdframed}
+	\begin{mdframed}[backgroundcolor=white]
+	Where: #3
+	\end{mdframed}
+	\begin{mdframed}[backgroundcolor=white]
+
+	
+}{\end{mdframed}\end{mdframed}}
+
+% Simpler (no boxes)
+%\renewenvironment{event}[3]
+%{
+%	\section{#1}
+%	When: #2
+	
+%	Where: #3
+
+
+	
+%}{}
+
+
+
+
 % By [XON]
 
-\section{UCC Fresher Welcome}
-\fbox{ Friday, February 31st
-5:00 PM
-Cameron Hall Loft (above the UCC clubroom)}
-
+\begin{event}{UCC Fresher Welcome}{Friday, February 31st, 5:00PM}{Cameron Hall Loft (above the UCC clubroom)}
 The Fresher welcome exists to welcome you, a new UCC member, to the club. There will be a number of current members there to talk with and get to know, and all of your questions about the club and how to use it will be answered. As a bonus, all first time members get {\bf FREE pizza}.
+\end{event}
 
-\section{UCC Annual General Meeting}
-\fbox{When:  Tuesday, March 11th
-1.00 PM
-Guild Council Meeting Room}
+\begin{event}{UCC Annual General Meeting}{Tuesday, March 11th, 1:00PM}{Guild Council Meeting Room}
 
 The AGM is the meeting at which the new UCC committee is elected for 2014. The only way to be represented is to attend on the day. As a Fresher, you should attend to either run for or vote for the position of the Fresher Representative, who will be your liaison for the committee. If you don't know where the Guild Council Meeting Room is, arrive at the UCC clubroom a little early to join the mass exodus.
 
-\section{Easter LAN}
-\fbox{When: Easter Weekend
-3:00 PM to the morning after}
+\end{event}
+
+\begin{event}{Easter LAN}{Easter Weekend, 3:00PM until the morning after}{The Loft (above UCC Clubroom)}
 
 UCC runs a number of LANs throughout the year, some with proper organisation, some without. The Easter LAN is the first big LAN of the academic year, taking place over the Easter weekend, the first weekend of mid-Semester one study break. We play a number of different games, and of course you can organise your own. LANs are free for all UCC members, but you can bring a friend for around \$5 (though of course you should encourage them to join). Bring your own PCs, or use one of the limited stock in the clubroom.
+
+\end{event}
 
 \section{LANs}
 {\bf When:} Throughout the Year
