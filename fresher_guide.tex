@@ -80,6 +80,12 @@
 \newcommand{\gitref}[2]{\href{https://github.com/UniversityComputerClub/FresherGuide/master/#1/#2}{  \textcolor{blue}{\emph{#2}}}}
 % Refer to API commands
 \newcommand{\api}[1]{  ``\textcolor{black}{\texttt{/api/#1}}''}
+% Pun alert
+\newcommand{\pun}[1]{\emph{#1}}
+% Shell command
+\newcommand{\shell}[1]{\texttt{#1}}
+% Rants
+\newcommand{\rant}[1]{\textsc{#1}}
 
 % To make underscores printable without escaping them
 \usepackage[T1]{fontenc}
@@ -143,7 +149,12 @@
 %---------------------------------------------------------
 %Include the chapters!
 
-\include{chapters/Introduction} % Chapter 1
+\include{chapters/FindClubroom} % Chapter 1
+\include{chapters/SetupAccount}
+\include{chapters/Dispense101}
+\include{chapters/Groups}
+\include{chapters/Clubroom}
+\include{chapters/Communications}
 % ETC
 
 %\newpage
@@ -156,7 +167,7 @@
 
 % Appendices
 \appendix
-%\include{appendices/glossary}
+\include{appendices/Glossary}
 %\include{appendices/figures}
 
 %---------------------------------------------------------
