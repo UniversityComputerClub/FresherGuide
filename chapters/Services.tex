@@ -1,4 +1,4 @@
-\zchapter{Services}
+\zchapter{UCC::Services}
 
 \newcommand{\server}[1]{\emph{#1}}
 
@@ -72,7 +72,7 @@ Upon creating your account you can choose an address to foward all emails to. Yo
 
 Alternately, you can use one of several methods to check your UCC email directly.
 \begin{enumerate}
-	\item alpine --- Connect via SSH and run "alpine". The interface is basic. Press the Control key a lot.
+	\item alpine --- Connect via SSH and run "alpine".
 	\item webmail --- Several options will be presented to you at \url{http://webmail.ucc.asn.au}
 	\item mail client (eg: Thunderbird) --- The server name is \server{secure.ucc.asn.au}. Use port 993 and IMAP. With your UCC username and password.
 \end{enumerate}
@@ -99,13 +99,14 @@ We use something called LDAP for authentication and linux accounts. SAMBA is inv
 
 \begin{uccservice}{File Storage}{mylah, enron/stearns, nortel/onetel, motsugo}
 
-With your account comes not one, but \emph{two} directories for your files.
+With your account comes not one, but \emph{two} "home" directories for your files.
 
-The one most commonly seen is accessable on clubroom machines. It will be named "/home/ucc/username" on clubroom linux machines. On servers however, there is a different "/home" directory; to get to your clubroom home directory you must access "/away/ucc/username".
+The one most commonly seen is accessable on clubroom machines. It will be named "/home/ucc/username" on clubroom linux machines. On servers however, that path leads to a different home directory; to get to your clubroom home directory (called "away") you must access "/away/ucc/username".
 
-Home directories on the servers are considered slightly more secure than your "away" directory.
+Home directories on the servers are considered slightly more secure than your "away" directory. 
 
-If you are using Linux, you can use the program "sshfs" to mount your home or away directories remotely. This is the most convenient method for uploading, downloading or editing files. Under windows, the programs "WinSCP" or "Filezilla" might not suck.
+
+If you are using Linux, you can use the program "sshfs" to mount your home or away directories remotely. This is probably the most convenient way to upload, download and edit files. Under windows, the programs "WinSCP" or "Filezilla" are recommended.
 
 %For interest: Not that interesting
 %\server{enron} and \server{stearns} are our slowly dying SAN which stores "away". \server{mylah} mounts the SAN directly and exports the filesystem over NFS.
@@ -118,7 +119,7 @@ If you are using Linux, you can use the program "sshfs" to mount your home or aw
 
 Murasoi is a wheel-only server which serves as a router for all of UCC's networks and runs the infamous "ucc-fw" firewall. Murasoi also acts as the DHCP server.
 
-For some reason, DNS is not on murasoi, but on mooneye. The magic that makes \url{http://username.ucc.asn.au} point to your website happens on mooneye.
+DNS is on mooneye. The magic that makes \url{http://username.ucc.asn.au} point to your website happens on mooneye.
 
 \end{uccservice}
 

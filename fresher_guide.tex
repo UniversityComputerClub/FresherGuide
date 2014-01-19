@@ -39,7 +39,7 @@
 %\usepackage{listings} % For code snippets
 \definecolor{pink}{rgb}{1.0,0.5,0.5}
 \definecolor{darkgray}{rgb}{0.1,0.1,0.1}
-\definecolor{lightgray}{rgb}{0.7,0.7,0.7}
+\definecolor{lightgray}{rgb}{0.95,0.95,0.95}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{darkred}{rgb}{0.75,0,0}
 \definecolor{darkblue}{rgb}{0,0,0.35}
@@ -54,7 +54,7 @@
 %\lstset{showstringspaces=false}
 %\lstset{basicstyle=\small}
 
-
+\usepackage[table]{xcolor}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
@@ -93,7 +93,7 @@
 \newcommand{\shell}[1]{\texttt{#1}}
 % Rants
 \newcommand{\rant}[1]{\textsc{#1}}
-\renewcommand{\url}[1]{\href{#1}{\color{blue}{#1}}}
+\renewcommand{\url}[1]{<\href{#1}{\underline{\color{darkblue}{#1}}}>}
 
 
 \newcommand{\setfont}[1]{\fontfamily{#1}\selectfont}
@@ -179,19 +179,21 @@
 \include{chapters/Clubroom}
 \include{chapters/Communications}
 \include{chapters/Services}
+\include{chapters/UnixCommands}
+\include{chapters/Glossary}
 % ETC
 
 %\newpage
 %---------------------------------------------------------
-\renewcommand{\bibname}{References}
-\bibliography{references/refs}
-\bibliographystyle{ieeetr}  
+%\renewcommand{\bibname}{References}
+%\bibliography{references/refs}
+%\bibliographystyle{ieeetr}  
 %\addcontentsline{toc}{part}{References}
 %---------------------------------------------------------
 
 % Appendices
-\appendix
-\include{appendices/Glossary}
+%\appendix
+%\include{appendices/Glossary}
 %\include{appendices/figures}
 
 %---------------------------------------------------------

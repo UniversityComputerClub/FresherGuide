@@ -11,10 +11,10 @@ fresher_guide.pdf : fresher_guide.tex
 	rm -f *.aux *.bbl *.log *.toc *.lof *.blg *.lot
 
 	$(TEX) -shell-escape $(NAME)
-	bibtex $(NAME)
+	#bibtex $(NAME)
 	$(TEX) --shell-escape $(NAME)
 	$(TEX) --shell-escape $(NAME)
-	bibtex $(NAME)
+	#bibtex $(NAME)
 	$(TEX) --shell-escape $(NAME)
 	$(TEX) --shell-escape $(NAME)
 
