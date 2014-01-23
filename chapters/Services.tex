@@ -5,7 +5,7 @@
 \begin{mdframed}
 This Chapter provides an overview of UCC's services (as of January 2014); how to use them, what they are for, what servers are responsible for them. The full hostname for a server is \server{server.ucc.asn.au}.
 
- Servers are usually named after fish beginning with M. This is because they are in the Machine Room, and they run Linux. The mascot for Linux is Tux, a penguin, and he likes to eat fish. The more you know...
+ Servers are usually named after fish beginning with M. This is because they are in the Machine Room, and they run Linux. The mascot for Linux is Tux, a penguin, and he likes to eat fish.
 
 
 Remember that all services are maintained by UCC's members. If you are interested in learning more, or running a new service, ask someone!
@@ -38,7 +38,7 @@ Administrator access to \server{heathred} is fairly unrestricted; it is also ava
 
 \end{uccservice}
 
-
+\pagebreak
 
 \begin{uccservice}{Drinks and Snacks --- Dispense}{merlo, coke machine, snack machine}
 
@@ -48,7 +48,7 @@ A relay connected to \server{merlo} can be activated by door members from the sn
 
 \end{uccservice}
 
-\pagebreak
+
 
 \begin{uccservice}{Mumble}{heathred}
 
@@ -63,7 +63,7 @@ Mumble is a thing for voice chat whilst playing games. \server{heathred} runs a 
 From within the clubroom, you can navigate to \url{http://robotnik} to play music over the speakers. Beware, as repeated abuse may lead to activation of the dreaded "loldongs" mode.
 
 \end{uccservice}
-
+\pagebreak
 \begin{uccservice}{Email}{mooneye}
 
 UCC proudly runs its own mail server. You have an email account <username@ucc.asn.au>. The address <username@ucc.gu.uwa.edu.au> will also work.
@@ -99,6 +99,16 @@ We use something called LDAP for authentication and linux accounts. SAMBA is inv
 
 \end{uccservice}
 
+\begin{uccservice}{Network Servers}{murasoi, mooneye}
+
+Murasoi is a wheel-only server which serves as a router for all of UCC's networks and runs the infamous "ucc-fw" firewall. Murasoi also acts as the DHCP server.
+
+DNS is on mooneye. The magic that makes \url{http://username.ucc.asn.au} point to your website happens on mooneye.
+
+\end{uccservice}
+
+\pagebreak
+
 \begin{uccservice}{File Storage}{mylah, enron/stearns, nortel/onetel, motsugo}
 
 With your account comes not one, but \emph{two} "home" directories for your files.
@@ -115,18 +125,9 @@ If you are using Linux, you can use the program "sshfs" to mount your home or aw
 %\server{motsugo}'s disks contain "home" which is exported only to servers via NFS.
 %The NetApp \server{nortel} and \server{onetel} store Virtual Machine (VM) images, and "/services" --- the directory that contains UCC's website, amongst other things.
 
-\end{uccservice}
 
-\begin{uccservice}{Network Servers}{murasoi, mooneye}
-
-Murasoi is a wheel-only server which serves as a router for all of UCC's networks and runs the infamous "ucc-fw" firewall. Murasoi also acts as the DHCP server.
-
-DNS is on mooneye. The magic that makes \url{http://username.ucc.asn.au} point to your website happens on mooneye.
 
 \end{uccservice}
-
-
-\pagebreak
 
 \begin{uccservice}{Virtual Machine Hosting}{medico, motsugo, heathred, mylah}
 
