@@ -4,7 +4,7 @@
 
 \newenvironment{ucclist}[1]
 {
-	\begin{mdframed}
+	\begin{mdframed}[nobreak=true]
 	\subsection{#1}
 	\begin{mdframed}
 		Address:  <\href{mailto:#1@ucc.asn.au}{#1@ucc.asn.au}>
@@ -50,10 +50,12 @@ Technical question? Suggestions or discussion around UCCs setup?
 The list used to discuss UCC's hardware and machines. 
 \end{ucclist}
 
+\pagebreak
+
 \section{Social Media}
 
-\begin{mdframed}
-
+\begin{mdframed}[nobreak=true]
+\null
 Dragging itself kicking and screaming into the 21st Century, UCC has managed to set up a social media presence in something called the "cloud".
 
 \begin{itemize}
@@ -75,6 +77,7 @@ Dragging itself kicking and screaming into the 21st Century, UCC has managed to 
 
 
 \begin{mdframed}
+\null
 Without a doubt, the easiest way to waste time in or out of UCC 
 is chatting on our Internet Relay Chat (IRC) server. 
 
@@ -90,7 +93,7 @@ and join the channel \texttt{\#ucc}, or with a web browser go to
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{figures/webirc.png}
+	\includegraphics[width=0.99\textwidth]{figures/webirc2.png}
 	\caption{What normally happens when a Fresher joins IRC}
 	\label{webirc.jpg}
 \end{figure}
