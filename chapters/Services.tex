@@ -1,6 +1,7 @@
 \zchapter{UCC::Services}
 
-\newcommand{\server}[1]{\emph{#1}}
+% clash with global command
+% \newcommand{\server}[1]{\emph{#1}}
 
 \begin{mdframed}
 \null
@@ -11,19 +12,17 @@ This Chapter provides an overview of UCC's services (as of January 2014); how to
 
 Remember that all services are maintained by UCC's members. If you are interested in learning more, or running a new service, ask someone!
 
-
 \end{mdframed}
 
 \newenvironment{uccservice}[2]
 {
-	\begin{mdframed}
 	\section{#1}
 	\begin{mdframed}
 		Machine(s) Involved: \server{#2}
 	\end{mdframed}
 
 	
-}{\end{mdframed}}
+}
 
 \begin{uccservice}{Games}{heathred}
 
@@ -38,8 +37,6 @@ The Heathred A. Loveday memorial games server hosts the following games on a reg
 Administrator access to \server{heathred} is fairly unrestricted; it is also available as a general use server. For example, its GPU has been used in the past for number crunching projects.
 
 \end{uccservice}
-
-\pagebreak
 
 \begin{uccservice}{Drinks and Snacks --- Dispense}{merlo, coke machine, snack machine}
 
@@ -60,13 +57,10 @@ Mumble is a thing for voice chat whilst playing games. \server{heathred} runs a 
 \end{uccservice}
 
 \begin{uccservice}{Clubroom Music}{robotnik}
-
 From within the clubroom, you can navigate to \url{http://robotnik} to play music over the speakers. Beware, as repeated abuse may lead to activation of the dreaded "loldongs" mode.
-
 \end{uccservice}
-\pagebreak
-\begin{uccservice}{Email}{mooneye}
 
+\begin{uccservice}{Email}{mooneye}
 UCC proudly runs its own mail server. You have an email account <username@ucc.asn.au>. The address <username@ucc.gu.uwa.edu.au> will also work.
 
 Upon creating your account you can choose an address to foward all emails to. You can change this at any time by editing the ".forward" file in your home directory.
@@ -81,37 +75,24 @@ Alternately, you can use one of several methods to check your UCC email directly
 \end{uccservice}
 
 \begin{uccservice}{Web Hosting}{mantis, mussel}
-
 Members can publish their own sites! SSH to a server and edit the files in the directory "public-html". The website will appear at \url{http://username.ucc.asn.au}.
-
 \end{uccservice}
 
-\pagebreak
-
 \begin{uccservice}{Wiki Hosting}{mooneye}
-
 UCC uses a Wiki called "MoinMoin" to store documentation on servers, events, and miscellaneous things. It is visible at \url{http://wiki.ucc.asn.au}.
-
 \end{uccservice}
 
 \begin{uccservice}{User Logins}{mussel, mylah}
-
 We use something called LDAP for authentication and linux accounts. SAMBA is involved for windows logins. Only one member really knows how this works, so I will move swiftly on.
-
 \end{uccservice}
 
 \begin{uccservice}{Network Servers}{murasoi, mooneye}
-
 Murasoi is a wheel-only server which serves as a router for all of UCC's networks and runs the infamous "ucc-fw" firewall. Murasoi also acts as the DHCP server.
 
 DNS is on mooneye. The magic that makes \url{http://username.ucc.asn.au} point to your website happens on mooneye.
-
 \end{uccservice}
 
-\pagebreak
-
 \begin{uccservice}{File Storage}{mylah, enron/stearns, nortel/onetel, motsugo}
-
 With your account comes not one, but \emph{two} "home" directories for your files.
 
 The one most commonly seen is accessable on clubroom machines. It will be named "/home/ucc/username" on clubroom linux machines. On servers however, that path leads to a different home directory; to get to your clubroom home directory (called "away") you must access "/away/ucc/username".
@@ -126,35 +107,24 @@ If you are using Linux, you can use the program "sshfs" to mount your home or aw
 %\server{motsugo}'s disks contain "home" which is exported only to servers via NFS.
 %The NetApp \server{nortel} and \server{onetel} store Virtual Machine (VM) images, and "/services" --- the directory that contains UCC's website, amongst other things.
 
-
-
 \end{uccservice}
 
 \begin{uccservice}{Virtual Machine Hosting}{medico, motsugo, heathred, mylah}
-
 Members who are particularly nice to wheel group can get their own VM hosted at UCC. \server{medico} runs the amazing ProxMox interface and is used for all new VMs. The typical way to use this interface is from a web browser on \server{maaxen}, a VM running on \server{medico}...
 
 \server{heathred} is used for VMs when wheel complains that they aren't important enough to justify using all of \server{medico}'s CPU *cough* minecraft *cough*.
-
 \end{uccservice}
 
 \begin{uccservice}{Windows Server}{maaxen}
-
 \server{maaxen} is our token Windows server. It can be accessed through RDP, but beware, as it only supports two simultaneous sessions. \server{maaxen} boasts a range of useful programs including Notepad and Matlab.
-
 \end{uccservice}
 
 \begin{uccservice}{IRC}{mussel, mantis}
-
 IRC is discussed in Chapters \ref{SetupAccount} and \ref{Communications}.
 
 Our two IRC servers are bridged with CASSA and ComSSA, computer science associations at other Universities.
-
 \end{uccservice}
 
 \begin{uccservice}{General Use}{motsugo}
-
 SSH access is available to several servers, but \server{motsugo} is the best choice for general use. It is mostly used for personal software projects, and to run members' screen sessions so they can be \emph{constantly} connected to IRC.
-
 \end{uccservice}
-

@@ -35,6 +35,11 @@
 \usepackage{float}
 \usepackage[compact]{titlesec}
 \titlespacing{\chapter}{0pt}{-50pt}{0pt}
+% spacing glue: how to read {12pt plus 4pt minus 2pt}
+%           12pt is what we would like the spacing to be
+%           plus 4pt means that TeX can stretch it by at most 4pt
+%           minus 2pt means that TeX can shrink it by at most 2pt
+\titlespacing\section{0pt}{0pt plus 0pt minus 2pt}{0pt plus 0pt minus 2pt}
 \titleformat{\chapter}
 {\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
 

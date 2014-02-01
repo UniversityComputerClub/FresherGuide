@@ -1,5 +1,8 @@
 \zchapter{Common UNIX/Linux Commands}\label{UnixCommands}
 
+% Whenever a chapter is started with a figure or table, it forces a blank page?
+% -> Add some text
+In the Beginning was the Command Line.
 
 %\begin{mdframed}
 
@@ -18,30 +21,31 @@
 
 
 
-		\uc{logout}{Logs you off the system. Do this before you leave.}
-		\uc{ls <directory>}{Lists the files in the given directory (folder).}
-		\uc{cd <directory>}{Change to the given directory (folder).}
-		\uc{mkdir <directory>}{Add the specified directory (folder).}
-		\uc{rmdir <directory>}{Remove the specified directory (folder).}
-		\uc{pwd}{"Print Working Directory" --- Displays the path of the directory you are currently in.}
-		\uc{less <file>}{Read through a file (\emph{space} scrolls on a page, \emph{q} will quit)}
-		\uc{cp <source> <destination>}{Make a copy of a file in a new place.}
-		\uc{mv <source> <destination>}{Move (rename) a file.}
+		\uc{logout}{Logs you off the system. Do this before you leave}
+		\uc{ls <directory>}{Lists the files in the given directory (folder)}
+		\uc{cd <directory>}{Change to the given directory (folder)}
+		\uc{mkdir <directory>}{Add the specified directory (folder)}
+		\uc{rmdir <directory>}{Remove the specified directory (folder)}
+		\uc{pwd}{"Print Working Directory" --- Displays the path of the directory you are currently in}
+		\uc{less <file>}{Read through a file (\emph{space} scrolls, \emph{q} quits)}
+		\uc{cp <source> <destination>}{Make a copy of a file in a new place}
+		\uc{mv <source> <destination>}{Move (rename) a file}
 		\uc{rm <file>}{\textsc{{Permanently deletes a file. \newline There is no "Recycle Bin"!}}}
-		\uc{alpine}{This program can be used for reading emails.}
-		\uc{nano <file>, vim <file>, emacs <file>}{Three different text file editors. \shell{nano} is the simplest.}
-		\uc{finger <username>, tla <username or TLA>, who}{Check to see who someone is and if they are logged in.}
-		\uc{ssh <username>@<hostname>}{Log in (securely) to another (UNIX) machine.}
-		\uc{ping <hostname>}{Ping another machine to see if it is up and what the latency is. Press \emph{Ctrl-C} to cancel.}
-		\uc{man <command>}{Displays the manual for a command. See \shell{man man} for more information.}
-		\uc{top}{Displays an updating list of current processes on the system.} 
-		\uc{ps}{Lists the processes you are running on this terminal (names and PIDs)}
+%		\uc{alpine}{This program can be used for reading emails}
+		\uc{nano <file>, vim <file>, emacs <file>}{Three different text file editors. \shell{nano} is the simplest}
+		\uc{finger <username>}{Check to see who someone is and if they are logged in}
+		\uc{tla <username|TLA>}{Look up a UCC TLA}
+		\uc{ssh <username>@<hostname>}{Log in (securely) to another (UNIX) machine}
+		\uc{ping <hostname>}{Ping another machine to see if it is up and what the latency is. Press \emph{Ctrl-C} to cancel}
+		\uc{man <command>}{Displays the manual for a command. See \shell{man man} for more information}
+		\uc{top}{Displays an updating list of current processes} 
+%		\uc{ps}{Lists the processes you are running on this terminal (names and PIDs)}
 		\uc{ps aux}{Lists all processes running on the system}
-		\uc{kill <PID>}{Tell a process it should stop. \shell{kill -9} will kill a process immediately.}
+		\uc{kill <PID>}{Tell a process it should stop. \shell{kill -9} will kill a process immediately}
 		\uc{passwd}{On \server{mussel} - Change your login password}
 		\uc{dispense}{Get yourself a delicious drink!}
-		\uc{gcc/g++}{C/C++ compilers for compiling some awesome code you wrote.}
-		\uc{python}{Python interpreter for interpreting some OK code you wrote.}
+		\uc{gcc/g++}{C/C++ compilers for compiling some awesome code you wrote}
+		\uc{python}{Python interpreter for interpreting some OK code you wrote}
 		\uc{irssi}{Join IRC to chat/argue with other members}
 		\hline
 	\end{tabular}
