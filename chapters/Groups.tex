@@ -3,15 +3,19 @@
 % Explanation of the groups.
 \newenvironment{uccgroup}[1]
 {
-	\begin{mdframed}[nobreak=true]
+	%\begin{mdframed}[nobreak=true]
+\begin{minipage}{\textwidth}
 	\section{\textsc{#1}}
 	Contact: <\href{mailto:#1@ucc.asn.au}{#1@ucc.asn.au}>
 	
 	
-}{\end{mdframed}}
+}{
+\end{minipage}
+%\end{mdframed}
+}
 
 % Is this section a little elitist sounding, or is that just the entire group system? [SZM]
-\begin{mdframed}
+%\begin{mdframed}
 \null
 The UCC committee delegates specific duties and responsibilities to other people in the club. These groups, traditionally modelled after UNIX groups, are referred to often.
 
@@ -29,7 +33,7 @@ More information on the groups can be found at \url{http://www.ucc.asn.au/infoba
 %Do not despair if you're not made a Wheel member immediately. Sticking around and showing an interest through contribution is more important than just having the skills.
 
 
-\end{mdframed}
+%\end{mdframed}
 
 \begin{uccgroup}{committee}
 The Committee is appointed each year by the members (that's you) at the AGM. They handle the day-to-day running of the club, managing money, events and holding grumpy meetings each week, which members like yourself are welcome to attend.
@@ -41,31 +45,26 @@ The Fresher Rep is your voice on the Committee. Get to know them and let them kn
 Fresher Rep: <\href{mailto:fresher@ucc.asn.au}{fresher@ucc.asn.au}>
 %\end{mdframed}
 \end{uccgroup}
-\pagebreak
+
 \begin{uccgroup}{wheel}
-
 Wheel is in charge of maintaining the club's machines. They are the best people to see if you're having problems with the computers. Wheel maintains its own membership, but works hand in hand with Committee on issues relating to account policy. If you abuse your account, it will be locked by a Wheel member. The unlocking of accounts is at the discretion of Committee. Wheel have infrequent meetings, where they sing the secret wheel song. % THIS DOESN'T ACTUALLY HAPPEN
-
 \end{uccgroup}
 
 \begin{uccgroup}{door}
 The Door group is responsible for the clubroom itself. Only a member of door group can unlock the clubroom and keep it open for members during the day. This means that if the only Door group member in the room has to leave, then everyone will have to leave until another Door group member arrives.
 \end{uccgroup}
-\pagebreak
+
 \begin{uccgroup}{coke}
 The Coke group are the people to talk to if you want to add money to your dispense account (see the section on dispense). They can also credit your account for bad dispenses and other tasks related to dispense.
 \end{uccgroup}
 
 % Not even worth mentioning, really, it is all just wheel
 \begin{uccgroup}{webmasters}
-
 The Webmasters are charged with maintaining the UCC web presence. Becoming a Webmaster usually involves showing some interest in the UCC website. It shouldn't be too hard to get on this group.
-
  Please. Someone save us from the horror of doctype graham.
 \end{uccgroup}
 
 \begin{uccgroup}{winadmin}
-
 The Winadmins group was created to give trusted members administrator access to the Windows desktop machines in the clubroom. Sprocket is the equivelant group for Linux desktop machines.
 \end{uccgroup}
 

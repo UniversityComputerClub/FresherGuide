@@ -5,13 +5,16 @@ UCC runs a lot of events. You should go to them! Dates and times may change.
 % Event with title and date
 \newenvironment{event}[3]
 {
-\begin{mdframed}[backgroundcolor=white,nobreak=true]
+%\begin{mdframed}[backgroundcolor=white,nobreak=true]
+\begin{minipage}{\textwidth}
 \color{black}{\section{#1}}
 When: #2\\
-Where: #3
+Where: #3\\
+
 
 }{
-\end{mdframed}
+\end{minipage}
+%\end{mdframed}
 }
 
 % Simpler (no boxes)
