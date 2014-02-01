@@ -2,7 +2,7 @@
 % This is complicated because it is based on [SZM]'s 2012 Honours Thesis template, which in turn was based on a template written by a Physics Professor.
 % ~50% of this isn't actually needed, but it's too much effort to clean it up.
 
-\documentclass[a5paper,10pt]{extreport}
+\documentclass[a5paper,10pt,openany]{extreport}
 \usepackage[margin=0.75in,headsep=0.25in,footskip=0.25in]{geometry}
 \renewcommand{\familydefault}{\sfdefault}
 %\renewcommand{\familydefault}{\ttdefault}
@@ -94,6 +94,7 @@
 \newcommand{\pun}[1]{#1} % Emphasising it is kind of unnecessary
 % Shell command
 \newcommand{\shell}[1]{\texttt{#1}}
+\newcommand{\server}[1]{\texttt{#1}}
 % Rants
 \newcommand{\rant}[1]{\textsc{#1}}
 \renewcommand{\url}[1]{<\href{#1}{\underline{\color{darkblue}{#1}}}>}
@@ -200,7 +201,7 @@
 
 \linespread{1.0}
 %\include{chapters/UnixCommands}
-%\include{chapters/Glossary}
+\include{chapters/Glossary}
 % ETC
 
 %\newpage
