@@ -87,7 +87,7 @@
 
 
 % Reference things in GitHub
-\newcommand{\gitref}[2]{\href{https://github.com/UniversityComputerClub/FresherGuide/master/#1/#2}{  \textcolor{blue}{\emph{#2}}}}
+\newcommand{\gitref}[2]{\href{https://github.com/UniversityComputerClub/FresherGuide/master/#1/#2}{  \textcolor{black}{\emph{#2}}}}
 % Refer to API commands
 \newcommand{\api}[1]{  ``\textcolor{black}{\texttt{/api/#1}}''}
 % Pun alert
@@ -97,8 +97,12 @@
 \newcommand{\server}[1]{\texttt{#1}}
 % Rants
 \newcommand{\rant}[1]{\textsc{#1}}
-\renewcommand{\url}[1]{<\href{#1}{\underline{\color{darkblue}{#1}}}>}
+% URL
+\renewcommand{\url}[1]{<\href{#1}{\underline{\color{black}{#1}}}>}
 
+% Reference things.
+\newcommand{\figref}[1]{(Figure \ref{#1})}
+\newcommand{\seeref}[1]{(See \ref{#1})}
 
 \newcommand{\setfont}[1]{\fontfamily{#1}\selectfont}
 
