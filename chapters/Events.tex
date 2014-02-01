@@ -18,14 +18,14 @@ UCC runs a lot of events. You should go to them! Dates and times may change.
 }
 
 % Simpler (no boxes)
-%\renewenvironment{event}[3]
-%{
-%	\section{#1}
-%	When: #2
+\renewenvironment{event}[3]
+{
+	\section{#1}
+	{\bf When:} #2
 	
-%	Where: #3
+	\noindent {\bf Where:} #3
 
-%}{}
+}{}
 
 
 
@@ -70,12 +70,12 @@ Tech talks are a chance to demonstrate your own tech-y knowledge, or learn from 
 
 
 \pagebreak
-\begin{mdframed}[backgroundcolor=white]
+%\begin{mdframed}[backgroundcolor=white]
 \color{black}{\section{FUCC Camp Scholarship}}
-\color{black}{Incoming message from James Cox and Lionel Price:}
+\noindent \color{black}{\bf Incoming message from James Cox and Lionel Price:}
 
 
-\color{black}{For new members to UCC, Lionel and I would like to tell you about our
+\noindent \color{black}{For new members to UCC, Lionel and I would like to tell you about our
 full-ride scholarship program. We realise that Camp is fairly
 expensive, but as once-freshers made good we are financially able to
 provide unto others. Previous recipients of these scholarships have
@@ -95,7 +95,7 @@ also need to declare in writing that they will participate in at least
 one game of DotA during UCC Camp, and that when we play ET you will
 not be a noob in the back with a mortar accomplishing nothing all
 match.}
-\end{mdframed}
+%\end{mdframed}
 
 %\begin{figure}[H]
 %	\centering
