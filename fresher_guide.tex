@@ -153,11 +153,11 @@
 \newcommand{\zchapter}[1]{\chapter{#1} \setcounter{section}{-1}}
 
 \usepackage{tocloft}
-\renewcommand\cftchapfont{\normalsize\bfseries}
-\renewcommand\cftsecfont{\normalsize}
+\renewcommand\cftchapfont{\small\bfseries}
+\renewcommand\cftsecfont{\small}
 
-\renewcommand\cftchappagefont{\normalsize\bfseries}
-\renewcommand\cftsecpagefont{\normalsize}
+\renewcommand\cftchappagefont{\small\bfseries}
+\renewcommand\cftsecpagefont{\small}
 %---------------------------------------------------------
 %---------------------------------------------------------
 \begin{document}
@@ -173,14 +173,14 @@
 %---------------------------------------------------------
 % Do the table of Contents and lists of figures and tables
 %---------------------------------------------------------
-\linespread{0.5}
+\linespread{0.3}
 % Do we need these for a fresher guide?
-%\tableofcontents
+{\small\tableofcontents}
 %\listoffigures
 \markboth{}{}
 \linespread{1.5}
 
-%\emph{"Interroga de Consensum Gradu Servitium nostra"}
+\emph{"Interroga de Consensum Gradu Servitium nostra"}
 
 \newpage
 
@@ -200,12 +200,12 @@
 %\include{chapters/Groups}
 %\include{chapters/Clubroom}
 \include{chapters/Communications}
-\include{chapters/Games}
+%\include{chapters/Games}
 %\include{chapters/Services}
 
 \linespread{1.0}
 %\include{chapters/UnixCommands}
-\include{chapters/Glossary}
+%\include{chapters/Glossary}
 % ETC
 
 %\newpage
