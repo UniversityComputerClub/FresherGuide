@@ -3,35 +3,33 @@
 % clash with global command
 % \newcommand{\server}[1]{\emph{#1}}
 
-\begin{mdframed}
-\null
+%\begin{mdframed}
+%\null
+
+\begin{comment}
 This Chapter provides an overview of UCC's services (as of January 2014); how to use them, what they are for, what servers are responsible for them. The full hostname for a server is \server{server.ucc.asn.au}.
 
  Servers are usually named after fish beginning with M. This is because they are in the Machine Room, and they run Linux. The mascot for Linux is Tux, a penguin, and he likes to eat fish.
 
 
 Remember that all services are maintained by UCC's members. If you are interested in learning more, or running a new service, ask someone!
+\end{comment}
 
-\end{mdframed}
+%\end{mdframed}
 
 \newenvironment{uccservice}[2]
 {
 	\section{#1}
-	\begin{mdframed}
-		Machine(s) Involved: \server{#2}
-	\end{mdframed}
+	%\begin{mdframed}
+		%\noindent{\bf Machine(s) Involved:} \server{#2} % Freshers don't need to know this
+	%\end{mdframed}
 
 	
 }
 
 \begin{uccservice}{Games}{heathred}
 
-The Heathred A. Loveday memorial games server hosts the following games on a regular basis:
-\begin{itemize}
-	\item Minecraft -- The server is \server{minecraft}, a VM on \server{heathred}
-	\item TF2
-	\item Enemy Territory (popular at LANs)
-\end{itemize}
+The Heathred A. Loveday memorial games server hosts many games including: Minecraft, TF2 and Wolfenstein: Enemy Territory (ET).
 
 
 Administrator access to \server{heathred} is fairly unrestricted; it is also available as a general use server. For example, its GPU has been used in the past for number crunching projects.
@@ -61,16 +59,18 @@ From within the clubroom, you can navigate to \url{http://robotnik} to play musi
 \end{uccservice}
 
 \begin{uccservice}{Email}{mooneye}
-UCC proudly runs its own mail server. You have an email account <username@ucc.asn.au>. The address <username@ucc.gu.uwa.edu.au> will also work.
+UCC proudly runs its own mail server. You have an email account \texttt{<username@ucc.asn.au>}.
 
 Upon creating your account you can choose an address to foward all emails to. You can change this at any time by editing the ".forward" file in your home directory.
-
+\begin{comment}
+% Normal people just use forwarding
 Alternately, you can use one of several methods to check your UCC email directly.
 \begin{enumerate}
 	\item alpine --- Connect via SSH and run "alpine".
 	\item webmail --- Several options will be presented to you at \url{http://webmail.ucc.asn.au}
 	\item mail client (eg: Thunderbird) --- The server name is \server{secure.ucc.asn.au}. Use port 993 and IMAP. With your UCC username and password.
 \end{enumerate}
+\end{comment}
 
 \end{uccservice}
 
@@ -82,6 +82,8 @@ Members can publish their own sites! SSH to a server and edit the files in the d
 UCC uses a Wiki called "MoinMoin" to store documentation on servers, events, and miscellaneous things. It is visible at \url{http://wiki.ucc.asn.au}.
 \end{uccservice}
 
+\begin{comment}
+% Not useful to Freshers
 \begin{uccservice}{User Logins}{mussel, mylah}
 We use something called LDAP for authentication and linux accounts. SAMBA is involved for windows logins. Only one member really knows how this works, so I will move swiftly on.
 \end{uccservice}
@@ -109,22 +111,28 @@ If you are using Linux, you can use the program "sshfs" to mount your home or aw
 
 \end{uccservice}
 
-\begin{uccservice}{Virtual Machine Hosting}{medico, motsugo, heathred, mylah}
-Members who are particularly nice to wheel group can get their own VM hosted at UCC. \server{medico} runs the amazing ProxMox interface and is used for all new VMs. The typical way to use this interface is from a web browser on \server{maaxen}, a VM running on \server{medico}...
+\end{comment}
 
-\server{heathred} is used for VMs when wheel complains that they aren't important enough to justify using all of \server{medico}'s CPU *cough* minecraft *cough*.
+\begin{uccservice}{Virtual Machine Hosting}{medico, motsugo, heathred, mylah}
+Members who are particularly nice to wheel group can get their own VM hosted at UCC. %\server{medico} runs the amazing ProxMox interface and is used for all new VMs. The typical way to use this interface is from a web browser on \server{maaxen}, a VM running on \server{medico}...
+
+%\server{heathred} is used for VMs when wheel complains that they aren't important enough to justify using all of \server{medico}'s CPU *cough* minecraft *cough*.
 \end{uccservice}
+
+
+% Either mentioned elsewhere or not important
 
 \begin{uccservice}{Windows Server}{maaxen}
 \server{maaxen} is our token Windows server. It can be accessed through RDP, but beware, as it only supports two simultaneous sessions. \server{maaxen} boasts a range of useful programs including Notepad and Matlab.
 \end{uccservice}
 
 \begin{uccservice}{IRC}{mussel, mantis}
-IRC is discussed in Chapters \ref{SetupAccount} and \ref{Communications}.
 
 Our two IRC servers are bridged with CASSA and ComSSA, computer science associations at other Universities.
 \end{uccservice}
 
 \begin{uccservice}{General Use}{motsugo}
-SSH access is available to several servers, but \server{motsugo} is the best choice for general use. It is mostly used for personal software projects, and to run members' screen sessions so they can be \emph{constantly} connected to IRC.
+SSH access is available to several servers, but \server{motsugo} is the best choice for general use. %It is mostly used for personal software projects, and to run members' screen sessions so they can be \emph{constantly} connected to IRC.
 \end{uccservice}
+
+
