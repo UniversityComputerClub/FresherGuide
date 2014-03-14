@@ -103,7 +103,7 @@
 % Rants
 \newcommand{\rant}[1]{\textsc{#1}}
 % URL
-\renewcommand{\url}[1]{<\href{#1}{\underline{\color{black}{#1}}}>}
+\renewcommand{\url}[1]{<\href{#1}{\underline{\color{blue}{#1}}}>}
 
 % Reference things.
 \newcommand{\figref}[1]{(Figure \ref{#1})}
@@ -170,7 +170,7 @@
 % keeps text within our margins
 \sloppy
 
-%\include{titlepage/Titlepage}               % This is who you are
+\include{titlepage/Titlepage}               % This is who you are
 
 \pagenumbering{arabic}
 \pagebreak
@@ -180,7 +180,7 @@
 %---------------------------------------------------------
 \linespread{0.3}
 % Do we need these for a fresher guide?
-%{\small\tableofcontents}
+{\small\tableofcontents}
 %\listoffigures
 \markboth{}{}
 \linespread{1.5}
@@ -197,20 +197,20 @@
 \setcounter{chapter}{-1}
 
 
-%\include{chapters/Introduction} % Chapter 0
+\include{chapters/Introduction} % Chapter 0
 \include{chapters/FindClubroom} % Chapter 1
-\include{chapters/Events}
-%\include{chapters/Groups}
-%\include{chapters/Clubroom}
-%\include{chapters/Communications}
-%\include{chapters/Games}
-\include{chapters/Services}
 \include{chapters/SetupAccount}
 \include{chapters/Dispense101}
+\include{chapters/Events}
+\include{chapters/Groups}
+\include{chapters/Clubroom}
+\include{chapters/Communications}
+\include{chapters/Games}
+\include{chapters/Services}
 
-%\linespread{1.0}
-%\include{chapters/UnixCommands}
-%\include{chapters/Glossary}
+\linespread{1.0}
+\include{chapters/UnixCommands}
+\include{chapters/Glossary}
 % ETC
 
 %\newpage
