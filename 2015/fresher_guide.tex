@@ -1,0 +1,232 @@
+% HERE BE DRAGONS
+% This is complicated because it is based on [SZM]'s 2012 Honours Thesis template, which in turn was based on a template written by a Physics Professor.
+% ~50% of this isn't actually needed, but it's too much effort to clean it up.
+
+\documentclass[a5paper,10pt,openany]{extreport}
+\usepackage[margin=0.75in,headsep=0.25in,footskip=0.25in]{geometry}
+\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\familydefault}{\ttdefault}
+%\linespread{1.3}
+%\usepackage{setspace}
+%\onehalfspacing 
+ \parskip 8pt           % sets spacing between paragraphs
+ %\renewcommand{\baselinestretch}{1.5} 	% Uncomment for 1.5 spacing between lines
+ %\parindent 0pt		  % sets leading space for paragraphs
+
+\usepackage{anyfontsize}
+
+\usepackage{mdframed}
+
+
+%\usepackage{natbib}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{caption}
+%\usepackage{subfigure}
+\usepackage{rotating}
+%\usepackage{lscape}
+\usepackage{pdflscape} % Needed for landscaping - in pdf viewer
+\usepackage{verbatim}
+\usepackage{amsmath, amsthm,amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+
+\usepackage{epstopdf}
+\usepackage{float}
+\usepackage[compact]{titlesec}
+\titlespacing{\chapter}{0pt}{-50pt}{0pt}
+% spacing glue: how to read {12pt plus 4pt minus 2pt}
+%           12pt is what we would like the spacing to be
+%           plus 4pt means that TeX can stretch it by at most 4pt
+%           minus 2pt means that TeX can shrink it by at most 2pt
+\titlespacing\section{0pt}{0pt plus 0pt minus 14pt}{0pt plus 0pt minus 14pt}
+\titleformat{\chapter}
+{\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
+
+%\usepackage[usenames,dvipsnames]{color}
+%\usepackage{listings} % For code snippets
+\definecolor{pink}{rgb}{1.0,0.5,0.5}
+\definecolor{darkgray}{rgb}{0.1,0.1,0.1}
+\definecolor{lightgray}{rgb}{0.95,0.95,0.95}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{darkred}{rgb}{0.75,0,0}
+\definecolor{darkblue}{rgb}{0,0,0.35}
+\definecolor{green}{rgb}{0,0.70,0}
+\definecolor{black}{rgb}{0,0,0}
+%\lstset{language=Java}
+%\lstset{backgroundcolor=\color{darkgray}}
+%\lstset{numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt}
+%\lstset{keywordstyle=\color{darkred}\bfseries}
+%\lstset{commentstyle=\color{darkblue}}
+%\lstset{stringsyle=\color{red}}
+%\lstset{showstringspaces=false}
+%\lstset{basicstyle=\small}
+
+\usepackage[table]{xcolor}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}
+\theoremstyle{remark}\newtheorem*{remark}{Remark}
+
+\newcommand{\Phid}[0]{\dot{\Phi}}
+\newcommand{\Phib}[0]{\bar{\Phi}}
+
+\newcommand{\de}[0]{\delta}
+\newcommand{\deb}[0]{\bar{\delta}}
+
+\newcommand{\that}[0]{\hat{\theta}}
+
+\newcommand{\vect}[1]{\boldsymbol{#1}} % Draw a vector
+\newcommand{\divg}[1]{\nabla \cdot #1} % divergence
+\newcommand{\curl}[1]{\nabla \times #1} % curl
+\newcommand{\grad}[1]{\nabla #1} %gradient
+\newcommand{\pd}[3][ ]{\frac{\partial^{#1} #2}{\partial #3^{#1}}} %partial derivative
+\newcommand{\der}[3][ ]{\frac{d^{#1} #2}{d #3^{#1}}} %full derivative
+\newcommand{\phasor}[1]{\tilde{#1}} % make a phasor
+\newcommand{\laplacian}[1]{\nabla^2 {#1}} % The laplacian operator
+
+
+
+% Reference things in GitHub
+\newcommand{\gitref}[2]{\href{https://github.com/UniversityComputerClub/FresherGuide/master/#1/#2}{  \textcolor{black}{\emph{#2}}}}
+% Refer to API commands
+\newcommand{\api}[1]{  ``\textcolor{black}{\texttt{/api/#1}}''}
+% Pun alert
+\newcommand{\pun}[1]{#1} % Emphasising it is kind of unnecessary
+% Shell command
+\newcommand{\shell}[1]{\texttt{#1}}
+\newcommand{\server}[1]{\texttt{#1}}
+% Rants
+\newcommand{\rant}[1]{\textsc{#1}}
+% URL
+\renewcommand{\url}[1]{<\href{#1}{\underline{\color{blue}{#1}}}>}
+
+% Reference things.
+\newcommand{\figref}[1]{(Figure \ref{#1})}
+\newcommand{\seeref}[1]{(See \ref{#1})}
+
+\newcommand{\setfont}[1]{\fontfamily{#1}\selectfont}
+
+% To make underscores printable without escaping them
+\usepackage[T1]{fontenc}
+\catcode`\_=12
+
+% Refer to code (can change each one as needed)
+\newcommand{\funct}[1]{  \texttt{#1}}
+\newcommand{\var}[1]{  \texttt{#1}}
+\newcommand{\type}[1]{  \texttt{#1}}
+\newcommand{\code}[1]{  \texttt{#1}}
+
+
+%\usepackage{endfloat}
+%\nomarkersintext
+%\pagestyle{plain}
+%\topmargin -0.6true in
+%\textwidth 15true cm
+%\textheight 9.5true in
+%\oddsidemargin 0.25true in
+%\evensidemargin 0.25true in
+%\headsep 0.4true in
+
+
+\usepackage{fancyheadings}
+\pagestyle{fancy}
+\addtolength{\headheight}{2.5pt}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter~~#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection~~#1}{}}
+\ifthenelse{\boolean{@twoside}}
+{
+        \rhead[\bfseries \rightmark]{\bfseries \thepage}
+        \lhead[\bfseries \leftmark]{\bfseries \thepage}
+        \addtolength{\headwidth}{\marginparsep}
+        \addtolength{\headwidth}{\marginparwidth}
+}{
+        \lhead{\bfseries \leftmark}
+        \rhead{\bfseries \thepage}
+}
+\cfoot{}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\newcommand{\zchapter}[1]{\chapter{#1} \setcounter{section}{-1}}
+
+\usepackage{tocloft}
+\renewcommand\cftchapfont{\small\bfseries}
+\renewcommand\cftsecfont{\small}
+
+\renewcommand\cftchappagefont{\small\bfseries}
+\renewcommand\cftsecpagefont{\small}
+%---------------------------------------------------------
+%---------------------------------------------------------
+\begin{document}
+
+% keeps text within our margins
+\sloppy
+
+\include{titlepage/Titlepage}               % This is who you are
+
+\pagenumbering{arabic}
+\pagebreak
+
+%---------------------------------------------------------
+% Do the table of Contents and lists of figures and tables
+%---------------------------------------------------------
+\linespread{0.3}
+% Do we need these for a fresher guide?
+{\small\tableofcontents}
+%\listoffigures
+\markboth{}{}
+\linespread{1.5}
+
+%\emph{"Interroga de Consensum Gradu Servitium nostra"}
+
+\newpage
+
+%\pagenumbering{arabic}
+%---------------------------------------------------------
+%---------------------------------------------------------
+%Include the chapters!
+
+\setcounter{chapter}{-1}
+
+
+\include{chapters/Introduction} % Chapter 0
+\include{chapters/FindClubroom} % Chapter 1
+\include{chapters/SetupAccount}
+\include{chapters/Dispense101}
+\include{chapters/Events}
+\include{chapters/Groups}
+\include{chapters/Clubroom}
+\include{chapters/Communications}
+\include{chapters/Games}
+\include{chapters/Services}
+
+\linespread{1.0}
+\include{chapters/UnixCommands}
+\include{chapters/Glossary}
+% ETC
+
+%\newpage
+%---------------------------------------------------------
+%\renewcommand{\bibname}{References}
+%\bibliography{references/refs}
+%\bibliographystyle{ieeetr}  
+%\addcontentsline{toc}{part}{References}
+%---------------------------------------------------------
+
+% Appendices
+%\appendix
+%\include{appendices/Glossary}
+%\include{appendices/figures}
+
+%---------------------------------------------------------
+
+\end{document}
+
