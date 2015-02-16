@@ -34,6 +34,8 @@
 \usepackage{epstopdf}
 \usepackage{float}
 \usepackage[compact]{titlesec}
+\usepackage{afterpage}
+
 \titlespacing{\chapter}{0pt}{-50pt}{0pt}
 % spacing glue: how to read {12pt plus 4pt minus 2pt}
 %           12pt is what we would like the spacing to be
@@ -136,19 +138,29 @@
 \usepackage{fancyheadings}
 \pagestyle{fancy}
 \addtolength{\headheight}{2.5pt}
-\renewcommand{\chaptermark}[1]{\markboth{\thechapter~~#1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection~~#1}{}}
-\ifthenelse{\boolean{@twoside}}
-{
-        \rhead[\bfseries \rightmark]{\bfseries \thepage}
-        \lhead[\bfseries \leftmark]{\bfseries \thepage}
-        \addtolength{\headwidth}{\marginparsep}
-        \addtolength{\headwidth}{\marginparwidth}
-}{
-        \lhead{\bfseries \leftmark}
-        \rhead{\bfseries \thepage}
-}
-\cfoot{}
+%\renewcommand{\chaptermark}[1]{\markboth{\thechapter~~#1}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection~~#1}{}}
+%\ifthenelse{\boolean{@twoside}}
+%{
+%        \rhead[\bfseries \rightmark]{\bfseries \thepage}
+%        \lhead[\bfseries \leftmark]{\bfseries \thepage}
+%        \addtolength{\headwidth}{\marginparsep}
+%        \addtolength{\headwidth}{\marginparwidth}
+%}{
+%        \lhead{\bfseries \leftmark}
+%        \rhead{\bfseries \thepage}
+%}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\lhead{}
+\chead{}
+\rhead{}
+
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
 
 \usepackage{etoolbox}
 \makeatletter
@@ -163,6 +175,22 @@
 
 \renewcommand\cftchappagefont{\small\bfseries}
 \renewcommand\cftsecpagefont{\small}
+
+\makeatletter
+\def\@seccntformat#1{}
+\def\@makechapterhead#1{}
+
+\renewcommand{\@makechapterhead}[1]{
+  {\huge\textbf{#1}\par\nobreak}
+}
+\makeatother
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
 %---------------------------------------------------------
 %---------------------------------------------------------
 \begin{document}
@@ -180,8 +208,8 @@
 %---------------------------------------------------------
 \linespread{0.3}
 % Do we need these for a fresher guide?
-\setcounter{tocdepth}{1}
-{\small\tableofcontents}
+%\setcounter{tocdepth}{1}
+%{\small\tableofcontents}
 %\listoffigures
 \markboth{}{}
 \linespread{1.5}
@@ -214,7 +242,8 @@
 \include{chapters/Glossary}
 % ETC
 
-%\newpage
+\afterpage{\blankpage}
+
 %---------------------------------------------------------
 %\renewcommand{\bibname}{References}
 %\bibliography{references/refs}
