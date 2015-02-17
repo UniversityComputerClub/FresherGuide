@@ -21,7 +21,7 @@
 %\usepackage{natbib}
 \usepackage{makeidx}
 \usepackage{graphicx}
-\usepackage{caption}
+\usepackage[labelformat=empty]{caption}
 %\usepackage{subfigure}
 \usepackage{rotating}
 %\usepackage{lscape}
@@ -242,7 +242,18 @@
 \include{chapters/Glossary}
 % ETC
 
-\afterpage{\blankpage}
+\blankpage
+
+\newpage
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{figures/compiling.png}
+	\caption{\url{http://xkcd.com/303}}
+	\label{compiling}
+\end{figure}
+
+\cfoot{this document was prepared by your friendly neighborhood overlord}
 
 %---------------------------------------------------------
 %\renewcommand{\bibname}{References}
